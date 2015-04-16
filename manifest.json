@@ -13,7 +13,7 @@
    "content_scripts": [ {
       "all_frames": false,
       "css": [ "css/bootstrap.css", "css/font-awesome.css", "css/animate.min.css", "css/jquery.mCustomScrollbar.css", "css/styles.css" ],
-      "js": [ "js/libs/knockout-3.0.0.js", "js/libs/knockout-3.0.0.customTemplateSource.js", "js/libs/knockout-3.0.0.mapping.js", "js/libs/jquery.js", "js/libs/jquery.mousewheel.min.js", "js/libs/jquery.mCustomScrollbar.js", "js/libs/underscore.js", "js/libs/bootstrap.min.js", "js/libs/require.js", "js/requireContent.js", "js/requireConfig.js", "js/libs/utils.js", "js/libs/utils.ct.js", "js/content.js" ],
+      "js": [ "js/libs/knockout-3.0.0.js", "js/libs/knockout-3.0.0.customTemplateSource.js", "js/libs/knockout-3.0.0.mapping.js", "js/libs/jquery.js", "js/libs/jquery.mousewheel.min.js", "js/libs/jquery.mCustomScrollbar.js", "js/libs/underscore.js", "js/libs/bootstrap.js", "js/libs/require.js", "js/requireContent.js", "js/requireConfig.js", "js/libs/utils.js", "js/libs/utils.ct.js", "js/content.js" ],
       "matches": [ "http://localhost-voz/", "http://localhost-voz/*", "*://*.localhost-voz/*", "*://*.vozforums.com/*", "http://*.vozforums.com/*", "http://www.vozforums.com/*" ],
       "run_at": "document_start"
    } ],

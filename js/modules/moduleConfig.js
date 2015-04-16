@@ -34,6 +34,9 @@ define({
         FollowThread : {
             path:"FollowThread/FollowThread"
         },
+        SafeSurfing : {
+            path:"SafeSurfing/SafeSurfing"
+        },
         LinkProcess:{
             path:"LinkProcess/LinkProcess"
         },
