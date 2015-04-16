@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voz Living - Option</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="../js/libs/knockout-3.0.0.js"></script>
+    <script src="../js/libs/knockout-3.0.0.customTemplateSource.js"></script>
+    <script src="../js/libs/jquery.js"></script>
+    <script src="../js/libs/jquery.browser.js"></script>
+    <script src="../js/libs/utils.js"></script>
+    <script src="../js/libs/utils.op.js"></script>
+    <script src="../js/libs/require.js"></script>
+    <script src="../js/modules/util/bgLib.js"></script>
+    <script src="../js/requireConfig.js"></script>
+    <script src="../js/requireContent.js"></script>
+    <script src="../js/libs/underscore.js"></script>
+    <script src="../js/libs/bootstrap.min.js"></script>
+    <link href="../themes/kuta/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../themes/kuta/assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="../themes/kuta/css/styles.css" rel="stylesheet">
+    <link href="../css/option-page.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- header -->
+<div id="header" class="navbar">
+    <div class="navbar-inner">
+        <!-- company or app name -->
+        <a class="brand hidden-phone" href="#">VOZ Extension</a>
+        <ul class="nav">
+            <li>
+                <a href="http://vozforums.com/showthread.php?t=2846050" target="_blank">
+                    <i class="icon-large icon-globe"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/VozLiving" target="_blank">
+                    <i class="icon-large icon-facebook"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/VozLiving">
+                    <i class="icon-large icon-envelope"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="icon-large icon-cog"></i>
+                </a>
+            </li>
+
+        </ul>
+        <ul class="nav pull-right">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="icon-large icon-user"></i>
+                </a>
+
+                <!--<ul class="dropdown-menu dropdown-user-account">-->
+
+                <!--<li class="account-img-container">-->
+                <!--<img class="thumb account-img" src="../themes/kuta/images/100/images.jpg" />-->
+                <!--</li>-->
+
+                <!--<li class="account-info">-->
+                <!--<h3>Amerigo Vespucci</h3>-->
+                <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>-->
+                <!--<p>-->
+                <!--<a href="#">Edit</a> | <a href="#">Account Settings</a>-->
+                <!--</p>-->
+                <!--</li>-->
+
+                <!--<li class="account-footer">-->
+                <!--<div class="row-fluid">-->
+
+                <!--<div class="span8">-->
+                <!--<a class="btn btn-small btn-primary btn-flat" href="#">Change avatar</a>-->
+                <!--</div>-->
+
+                <!--<div class="span4 align-right">-->
+                <!--<a class="btn btn-small btn-danger btn-flat" href="#">Logout</a>-->
+                <!--</div>-->
+
+                <!--</div>-->
+                <!--</li>-->
+
+                <!--</ul>-->
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="left_layout">
+    <div id="main_content" class="container-fluid">
+        <div id="general-settings">
+            <div>
+                <div class="row-fluid"  data-bind="foreach: modules">
+                    <!-- if:allSetting().length > 0 -->
+                    <div class="span6" data-bind="template:{name:template,data:data}">
+                        <!--<div class="well widget words">-->
+                            <!--<div class="widget-header ">-->
+                                <!--<h3 class="title" data-bind="text: friendlyName"></h3>-->
+                            <!--</div>-->
+                            <!--<form class="form-horizontal" data-bind="foreach: allSetting">-->
+                                <!--<div class="control-group">-->
+                                    <!--<label class="control-label" data-bind="text: text,attr:{for:id}"></label>-->
+
+                                    <!--<div class="controls">-->
+                                        <!--<input type="checkbox"-->
+                                               <!--data-bind="attr:{id:id},checked: val,disable: waitLoading">-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</form>-->
+                        <!--</div>-->
+                    </div>
+                    <!-- /ko-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <ul id="sidebar" class="nav nav-pills nav-stacked">
+        <li class="">
+            <a href="about.html">
+                <i class="micon-heart"></i>
+                <span class="hidden-phone">About</span>
+            </a>
+        </li>
+        <li class="">
+            <a href="#">
+                <i class="micon-support"></i>
+                <span class="hidden-phone">General</span>
+            </a>
+        </li>
+
+
+        <!--<li class="active">-->
+        <!--<a href="routes.html">-->
+        <!--<i class="micon-github-7"></i>-->
+        <!--<span class="hidden-phone">Routes</span>-->
+        <!--</a>-->
+        <!--</li>-->
+        <!--<li class="">-->
+        <!--<a href="schedules.html">-->
+        <!--<i class="micon-calendar"></i>-->
+        <!--<span class="hidden-phone">Schedules</span>-->
+        <!--</a>-->
+        <!--</li>-->
+        <!--<li class="">-->
+        <!--<a href="busstops.html">-->
+        <!--<i class="micon-location"></i>-->
+        <!--<span class="hidden-phone">Bus stops</span>-->
+        <!--</a>-->
+        <!--</li>-->
+
+    </ul>
+</div>
+<!-- addons -->
+<script src="../themes/kuta/plugins/chart-plugins.js"></script>
+<script src="../themes/kuta/plugins/jquery-ui-slider.js"></script>
+<script src="../themes/kuta/plugins/jquery.uniform.js"></script>
+<script src="../themes/kuta/plugins/chosen.jquery.min.js"></script>
+<script src="../themes/kuta/plugins/bootstrap-datepicker.js"></script>
+<script src="../themes/kuta/plugins/jquery.timePicker.min.js"></script>
+<script src="../js/modules/options-page/script.js"></script>
+</body>
+
+</html>

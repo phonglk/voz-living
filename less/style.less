@@ -1,0 +1,55 @@
+#threadList{
+    @col-author: 50px;
+    @col-lastPost: 150px;
+    @col-info: 120px;
+    .f17l_thread{
+        height: 40px;
+        border-bottom: 1px solid rgb(215,237,252);
+        padding: 5px;
+        width:~"-webkit-calc(100% - 10px)";
+        display:table;
+        .f17l_author_avatar,
+        .f17l_title,
+        .f17l_info,
+        .f17l_lastPost{
+            display:table-cell;
+        }
+        .f17l_title{
+            height: 40px;
+            width: auto;
+            position:relative;
+            .f17l_post_author,
+            .f171_sticky,
+            .f171_rating{
+                position: absolute;
+            }
+            .f17l_post_author{
+                left: 0;
+                bottom: 0;
+            }
+            .f171_sticky{
+                right: 10px;
+                top:0
+            }
+            .f171_rating{
+                right: 10px;
+                top:20px
+            }
+        }
+        .f17l_author_avatar{
+            width:@col-author;
+        }
+        .f17l_info{
+            width:@col-info;
+        }
+        .f17l_lastPost{
+            width:@col-lastPost;
+            .f17l_lasted_author{
+                width:100%;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+        }
+    }
+}

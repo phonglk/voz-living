@@ -1,0 +1,19 @@
+define(["bgHelper"],function(background){
+    return{
+        set:function(name,value,callback){
+            background.callFunction(
+                "setItemInEStorage",
+                [name,value],callback)
+        },
+        get:function(name,callback){
+            background.callFunction(
+                "getItemInEStorage",
+                [name],callback)
+        },
+        getNDefault:function(name,defaultValue,callback){
+            background.callFunction(
+                "getItemInEStorageNDefault",
+                [name,defaultValue],callback)
+        }
+    }
+})
