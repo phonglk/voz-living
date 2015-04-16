@@ -117,7 +117,7 @@ define(["moduleHelper", "lib/jquery-scrollto"], function (moduleHelper, jst) {
                 $this
                     .addClass("thread")
                     .attr("data-bind", "with: t" + thread_id);
-                var $paa = $("<div class='preview_active_area' title='Xem trước thớt' data-bind='css:{active:isActive},click:activeClick'><i class='fa fa-search'></i></div>")
+                var $paa = $("<div class='preview_active_area' title='Xem trước thớt' data-bind='css:{active:isActive},click:activeClick'><span class='icon-bolt'></span></div>")
                 $this.append($paa);
                 $this.find("> div").css({
                     "paddingRight": 41
