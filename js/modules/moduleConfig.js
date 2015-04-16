@@ -12,6 +12,15 @@ define({
             },
             setting:"options-page/removeAds"
         },
+        bypass2FL : {
+            settings:{
+                bypass:{
+                    text:"bypass 2 Phrase Login",
+                    default:"false"
+                }
+            },
+            setting:"options-page/bypass2FL"
+        },
         quoteNotification : {
             path:"quoteNoti5/quoteNotification",
             setting:"options-page/noti5",
