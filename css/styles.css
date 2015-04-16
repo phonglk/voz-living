@@ -21,9 +21,7 @@
 }
 #quoteNotification_bar {
   /* Track */
-
   /* Handle */
-
 }
 #quoteNotification_bar ::-webkit-scrollbar {
   width: 8px;
@@ -44,9 +42,7 @@
 }
 .plk_thread_list .thread .preview_container {
   /* Track */
-
   /* Handle */
-
 }
 .plk_thread_list .thread .preview_container ::-webkit-scrollbar {
   width: 8px;
@@ -79,7 +75,7 @@ a:hover {
 }
 .badge.badge-mini {
   font-size: 9px !important;
-  padding: 0px 3px !important;
+  padding: 0 3px !important;
 }
 .plk_backdrop {
   width: 100%;
@@ -139,7 +135,7 @@ a:hover {
   min-width: 400px;
   height: 40%;
   min-height: 200px;
-  background: #5780C9;
+  background: #5780c9;
   color: white;
   box-shadow: 2px 2px 3px black;
   position: absolute;
@@ -159,8 +155,8 @@ a:hover {
 .plk_contentbar .bar-item-container .data-list .data-item {
   color: white;
   border-bottom: 2px solid #39527f;
-  padding: 0 0 5px 0;
-  margin: 5px 0 5px 0;
+  padding: 0 0 5px;
+  margin: 5px 0;
 }
 .plk_contentbar .bar-item-container .data-list .data-item a {
   color: white;
@@ -175,8 +171,8 @@ a:hover {
 #quoteNotification_bar .bar-item-container .Noti5-QuoteList .Noti5-QuoteItem {
   color: white;
   border-bottom: 2px solid #39527f;
-  padding: 0 0 5px 0;
-  margin: 5px 0 5px 0;
+  padding: 0 0 5px;
+  margin: 5px 0;
 }
 #quoteNotification_bar .bar-item-container .Noti5-QuoteList .Noti5-QuoteItem a {
   color: white;
@@ -241,7 +237,7 @@ a:hover {
 }
 .plk_thread_list .thread .preview_container {
   display: block;
-  padding: 0 0 0px 0;
+  padding: 0;
   position: relative;
   margin: 0;
   clear: both;
@@ -276,7 +272,7 @@ a:hover {
 }
 .plk_thread_list .thread .preview_container .preview_inner .content .inner-content .alt2,
 .plk_thread_list .thread .preview_container .preview_inner .content .inner-content .alt2Active {
-  background: #39527F !important;
+  background: #39527f !important;
   color: white !important;
 }
 .plk_thread_list .thread .preview_container .preview_inner .content .inner-content a {
