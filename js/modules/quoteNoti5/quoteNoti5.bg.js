@@ -72,17 +72,17 @@ define(["bg/messageHelper.bg", "settings"], function (msgHelper, settings) {
                     hasChanged = true;
 //                    TODO: do notification helper class
                     if (JSON.parse(settingContext.get("desktopNotification")) == true) {
-                        var notification = webkitNotifications.createNotification(
-                            '/icos/64.png',  // icon url - can be relative
-                            'Trích dẫn trong thớt ' + quote.thread.title,  // notification title
-                            '@{0}: {1}\n >>>>>Bạn vui lòng vô voz để xem'.format(quote.author.username, quote.post.content)  // notification body text
-                        );
-                        notification.show();
-                        $('<audio id="quote-sound" src="{0}"></audio>'.format(eUrl("audios/quote.mp3")))
-
-                        setTimeout(function () {
-                            notification.cancel();
-                        }, 3000)
+                        // var notification = Notifications.createNotification(
+                        //     '/icos/64.png',  // icon url - can be relative
+                        //     'Trích dẫn trong thớt ' + quote.thread.title,  // notification title
+                        //     '@{0}: {1}\n >>>>>Bạn vui lòng vô voz để xem'.format(quote.author.username, quote.post.content)  // notification body text
+                        // );
+                        // notification.show();
+                        // $('<audio id="quote-sound" src="{0}"></audio>'.format(eUrl("audios/quote.mp3")))
+                        //
+                        // setTimeout(function () {
+                        //     notification.cancel();
+                        // }, 3000)
                     }
                 }
             }
