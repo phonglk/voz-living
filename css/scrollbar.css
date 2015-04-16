@@ -21,9 +21,7 @@
 }
 #quoteNotification_bar {
   /* Track */
-
   /* Handle */
-
 }
 #quoteNotification_bar ::-webkit-scrollbar {
   width: 8px;
@@ -44,9 +42,7 @@
 }
 .plk_thread_list .thread .preview_container {
   /* Track */
-
   /* Handle */
-
 }
 .plk_thread_list .thread .preview_container ::-webkit-scrollbar {
   width: 8px;

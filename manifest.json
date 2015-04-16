@@ -7,14 +7,40 @@
          "19": "icos/16.png",
          "38": "icos/64.png"
       },
-      "default_popup": "popup.html",
+      "default_popup": "./html/popup.html",
       "default_title": "Voz Living"
    },
    "content_scripts": [ {
       "all_frames": false,
-      "css": [ "css/bootstrap.css", "css/font-awesome.css", "css/animate.min.css", "css/jquery.mCustomScrollbar.css", "css/styles.css" ],
-      "js": [ "js/libs/knockout-3.0.0.js", "js/libs/knockout-3.0.0.customTemplateSource.js", "js/libs/knockout-3.0.0.mapping.js", "js/libs/jquery.js", "js/libs/jquery.mousewheel.min.js", "js/libs/jquery.mCustomScrollbar.js", "js/libs/underscore.js", "js/libs/bootstrap.min.js", "js/libs/require.js", "js/requireContent.js", "js/requireConfig.js", "js/libs/utils.js", "js/libs/utils.ct.js", "js/content.js" ],
-      "matches": [ "http://localhost/", "http://localhost/*", "*://*.localhost/*", "*://*.vozforums.com/*", "http://*.vozforums.com/*", "http://www.vozforums.com/*" ],
+      "css": [ 
+         "bower_components/bootstrap/dist/css/bootstrap.css", 
+         "bower_components/fontawesome/css/font-awesome.css", 
+         "css/styles.css" 
+      ],
+      "js": [ 
+         "bower_components/knockoutjs/dist/knockout.js", 
+         "bower_components/jquery/dist/jquery.js", 
+         "bower_components/lodash/lodash.js", 
+         "bower_components/requirejs/require.js", 
+         "js/libs/knockout-3.0.0.customTemplateSource.js", 
+         "js/libs/knockout-3.0.0.mapping.js", 
+         "js/libs/jquery.mousewheel.min.js", 
+         "js/libs/jquery.mCustomScrollbar.js", 
+         "js/libs/bootstrap.min.js", 
+         "js/requireContent.js", 
+         "js/requireConfig.js", 
+         "js/libs/utils.js", 
+         "js/libs/utils.ct.js", 
+         "js/content.js" 
+      ],
+      "matches": [ 
+         "http://localhost/", 
+         "http://localhost/*", 
+         "*://*.localhost/*", 
+         "*://*.vozforums.com/*", 
+         "http://*.vozforums.com/*", 
+         "http://www.vozforums.com/*"
+      ],
       "run_at": "document_start"
    } ],
    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
@@ -29,9 +55,25 @@
    "manifest_version": 2,
    "name": "Voz Living",
    "options_page": "html/options.html",
-   "permissions": [ "tabs", "http://vozforums.com/*", "https://vozforums.com/*", "http://www.vozforums.com/*", "https://www.vozforums.com/*", "notifications", "storage" ],
+   "permissions": [ 
+      "tabs", 
+      "http://vozforums.com/*", 
+      "https://vozforums.com/*", 
+      "http://www.vozforums.com/*", 
+      "https://www.vozforums.com/*", 
+      "notifications", 
+      "storage" 
+   ],
    "short_name": "Voz",
    "update_url": "https://clients2.google.com/service/update2/crx",
    "version": "2.1.5",
-   "web_accessible_resources": [ "html/*", "js/*", "css/*", "font/*", "img/*", "icos/*", "audios/*" ]
+   "web_accessible_resources": [ 
+      "html/*", 
+      "js/*", 
+      "css/*", 
+      "font/*", 
+      "img/*", 
+      "icos/*", 
+      "audios/*" 
+   ]
 }
