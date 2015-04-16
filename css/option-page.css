@@ -1,3 +1,0 @@
-#main_content .row-fluid [class*="span"]:nth-child(odd) {
-  margin-left: 0 !important;
-}
