@@ -32,6 +32,6 @@
    "permissions": [ "tabs", "http://vozforums.com/*", "https://vozforums.com/*", "http://www.vozforums.com/*", "https://www.vozforums.com/*", "notifications", "storage" ],
    "short_name": "Voz",
    "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "2.1.5",
+   "version": "2.1.6",
    "web_accessible_resources": [ "html/*", "js/*", "css/*", "font/*", "img/*", "icos/*", "audios/*" ]
 }
