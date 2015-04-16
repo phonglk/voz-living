@@ -8,11 +8,11 @@ define(function () {
                     "<style>" +
                     "@font-face {" +
                     "font-family: 'FontAwesome';" +
-                    "src: url('"+eUrl("/font/fontawesome-webfont.eot?v=3.2.1")+"');" +
-                    "src: url('"+eUrl("/font/fontawesome-webfont.eot?#iefix&v=3.2.1")+"') format('embedded-opentype')," +
-                    " url('"+eUrl("/font/fontawesome-webfont.woff?v=3.2.1")+"') format('woff')," +
-                    " url('"+eUrl("/font/fontawesome-webfont.ttf?v=3.2.1")+"') format('truetype'), " +
-                    "url('"+eUrl("/font/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1")+"') format('svg');" +
+                    "src: url('"+eUrl("bower_components/fontawesome/fonts/fontawesome-webfont.eot?v=4.3.0")+"');" +
+                    "src: url('"+eUrl("bower_components/fontawesome/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0")+"') format('embedded-opentype')," +
+                    " url('"+eUrl("bower_components/fontawesome/fonts/fontawesome-webfont.woff?v=4.3.0")+"') format('woff')," +
+                    " url('"+eUrl("bower_components/fontawesome/fonts/fontawesome-webfont.ttf?v=4.3.0")+"') format('truetype'), " +
+                    "url('"+eUrl("bower_components/fontawesome/fonts/fontawesome-webfont.svg#fontawesomeregular?v=4.3.0")+"') format('svg');" +
                     "font-weight: normal;" +
                     "font-style: normal;" +
                     "}" +
