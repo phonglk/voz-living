@@ -9,7 +9,7 @@ require.load = function (context, moduleName, url) {
 //            try{
                 log("Require load "+url);
                 new Function(xhr.responseText).call();
-                context.completeLoad(moduleName)
+                context.completeLoad(moduleName)    
 //            }catch(er){
 //                log("Error while loading content: " + xhr.responseText);
 //                log("Error details: ",er.message);

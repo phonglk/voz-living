@@ -25,6 +25,7 @@
     "lodash": "~3.7.0",
     "requirejs": "~2.1.17",
     "jquery.browser": "~0.0.7",
-    "fontawesome": "~4.3.0"
+    "fontawesome": "~4.3.0",
+    "bower-knockout-mapping": "~2.5.0"
   }
 }

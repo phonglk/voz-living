@@ -21,10 +21,14 @@ var path = {
 	]
 }
 
+gulp.task('clean-css', function(){
+	return 	gulp.src("./css/**/*.css")
+				.pipe(clean())
+})
+
 // Uncomment to minify css
-gulp.task('less', function () {
+gulp.task('less', ['clean-css'], function () {
   	return  gulp.src('./less/**/*.less')
-				.pipe(watch('./less/**/*.less'))
 				.pipe(less())
 				// .pipe(minifyCSS()) 
 				.pipe(gulp.dest('./css'));
@@ -46,4 +50,6 @@ gulp.task('build', ['copy'], function() {
 		    	.pipe(gulp.dest(path.builtDir));
 });
 
-gulp.task('default', ['less'])
+gulp.task('default', ['less'], function(){
+	gulp.watch('./less/**/*.less', ['less'])
+})

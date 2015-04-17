@@ -96,7 +96,7 @@ define(["moduleHelper", "lib/jquery-scrollto"], function (moduleHelper, jst) {
             if (isOnThreadListPage() == false)return;
             var $td_title_list = $("#threadslist tbody[id^='threadbits_forum'] tr td[id^='td_threadtitle_']")
             $("#threadslist")
-                .addClass("plk_thread_list")
+                .addClass("plk_thread_list table table-bordered")
                 .attr("data-bind", 'with: Threads')
             $td_title_list.each(function () {
                 var $this = $(this);
@@ -117,7 +117,7 @@ define(["moduleHelper", "lib/jquery-scrollto"], function (moduleHelper, jst) {
                 $this
                     .addClass("thread")
                     .attr("data-bind", "with: t" + thread_id);
-                var $paa = $("<div class='preview_active_area' title='Xem trước thớt' data-bind='css:{active:isActive},click:activeClick'><span class='icon-bolt'></span></div>")
+                var $paa = $("<div class='preview_active_area' title='Xem trước thớt' data-bind='css:{active:isActive},click:activeClick'><i class='fa fa-bolt'></i></div>")
                 $this.append($paa);
                 $this.find("> div").css({
                     "paddingRight": 41
@@ -145,7 +145,7 @@ define(["moduleHelper", "lib/jquery-scrollto"], function (moduleHelper, jst) {
                     try {
                         lastPage = pages.eq(pages.length-1).attr("href").match(/&page=(\d+)/)[1];
                     } catch (e) {
-                        console.error("not has pages");
+                        console.log("not has pages");
                     }
                 }
 
