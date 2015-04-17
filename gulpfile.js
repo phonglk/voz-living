@@ -8,7 +8,8 @@ var gulp = require('gulp'),
 
 var path = {
 	compileDir: "./compile/",
-	builtDir: "./built",
+	builtDir: "./built/",
+	src: "./src/chrome/",
 	compileFiles: [
 		"./html/**/*.html",
 		"./js/**/*.js",
@@ -21,13 +22,17 @@ var path = {
 	]
 }
 
+gulp.task('clean-css', function(){
+	return 	gulp.src(path.src + "css/**/*.css")
+				.pipe(clean())
+})
+
 // Uncomment to minify css
-gulp.task('less', function () {
-  	return  gulp.src('./less/**/*.less')
-				.pipe(watch('./less/**/*.less'))
+gulp.task('less', ['clean-css'], function () {
+  	return  gulp.src('./**/*.less')
 				.pipe(less())
-				// .pipe(minifyCSS()) 
-				.pipe(gulp.dest('./css'));
+				// .pipe(minifyCSS())
+				.pipe(gulp.dest(path.src+'css'));
 });
 
 gulp.task('clean', function () {
@@ -36,7 +41,7 @@ gulp.task('clean', function () {
 });
 
 gulp.task('copy', ['clean'], function () {
-  	return  gulp.src(path.compileFiles, { base: "." })
+  	return  gulp.src(path.compileFiles, { cwd: path.src })
 				.pipe(gulp.dest(path.compileDir));
 });
 
@@ -46,4 +51,6 @@ gulp.task('build', ['copy'], function() {
 		    	.pipe(gulp.dest(path.builtDir));
 });
 
-gulp.task('default', ['less'])
+gulp.task('default', ['less'], function(){
+	gulp.watch(path.src + 'less/**/*.less', ['less']);
+});
