@@ -20,23 +20,23 @@ var path = {
 		"./themes/**/*",
 		"./audios/**/*"
 	]
-}
+};
 
 gulp.task('clean-css', function(){
-	return 	gulp.src(path.src + "css/**/*.css")
-				.pipe(clean())
-})
+	return 	gulp.src(path.src + "css/**/*.css", {read: false})
+				.pipe(clean());
+});
 
 // Uncomment to minify css
 gulp.task('less', ['clean-css'], function () {
-  	return  gulp.src('./**/*.less')
+  	return  gulp.src('./less/**/*.less' , {cwd: path.src})
 				.pipe(less())
 				// .pipe(minifyCSS())
 				.pipe(gulp.dest(path.src+'css'));
 });
 
 gulp.task('clean', function () {
-  	return  gulp.src(path.compileDir + '*')
+  	return  gulp.src(path.compileDir + '*', {read: false})
 				.pipe(clean());
 });
 
@@ -46,7 +46,7 @@ gulp.task('copy', ['clean'], function () {
 });
 
 gulp.task('build', ['copy'], function() {
-    return  gulp.src(path.compileDir)
+    return  gulp.src(path.compileDir + '*')
 		    	.pipe(zip('voz-living.zip'))
 		    	.pipe(gulp.dest(path.builtDir));
 });
