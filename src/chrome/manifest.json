@@ -12,33 +12,33 @@
    },
    "content_scripts": [ {
       "all_frames": false,
-      "css": [ 
-         "bower_components/bootstrap/dist/css/bootstrap.css", 
-         "bower_components/fontawesome/css/font-awesome.css", 
-         "css/styles.css" 
+      "css": [
+         "bower_components/bootstrap/dist/css/bootstrap.css",
+         "bower_components/fontawesome/css/font-awesome.css",
+         "css/styles.css"
       ],
-      "js": [ 
-         "bower_components/knockoutjs/dist/knockout.js", 
-         "bower_components/jquery/dist/jquery.js", 
-         "bower_components/lodash/lodash.js", 
-         "bower_components/requirejs/require.js", 
-         "js/libs/knockout-3.0.0.customTemplateSource.js", 
-         "js/libs/knockout-3.0.0.mapping.js", 
-         "js/libs/jquery.mousewheel.min.js", 
-         "js/libs/jquery.mCustomScrollbar.js", 
-         "js/libs/bootstrap.min.js", 
-         "js/requireContent.js", 
-         "js/requireConfig.js", 
-         "js/libs/utils.js", 
-         "js/libs/utils.ct.js", 
-         "js/content.js" 
+      "js": [
+         "bower_components/knockoutjs/dist/knockout.js",
+         "bower_components/jquery/dist/jquery.js",
+         "bower_components/lodash/lodash.js",
+         "bower_components/requirejs/require.js",
+         "js/libs/knockout-3.0.0.customTemplateSource.js",
+         "js/libs/knockout-3.0.0.mapping.js",
+         "js/libs/jquery.mousewheel.min.js",
+         "js/libs/jquery.mCustomScrollbar.js",
+         "js/libs/bootstrap.min.js",
+         "js/requireContent.js",
+         "js/requireConfig.js",
+         "js/libs/utils.js",
+         "js/libs/utils.ct.js",
+         "js/content.js"
       ],
-      "matches": [ 
-         "http://localhost/", 
-         "http://localhost/*", 
-         "*://*.localhost/*", 
-         "*://*.vozforums.com/*", 
-         "http://*.vozforums.com/*", 
+      "matches": [
+         "http://localhost/",
+         "http://localhost/*",
+         "*://*.localhost/*",
+         "*://*.vozforums.com/*",
+         "http://*.vozforums.com/*",
          "http://www.vozforums.com/*"
       ],
       "run_at": "document_start"
@@ -55,25 +55,25 @@
    "manifest_version": 2,
    "name": "Voz Living",
    "options_page": "html/options.html",
-   "permissions": [ 
-      "tabs", 
-      "http://vozforums.com/*", 
-      "https://vozforums.com/*", 
-      "http://www.vozforums.com/*", 
-      "https://www.vozforums.com/*", 
-      "notifications", 
-      "storage" 
+   "permissions": [
+      "tabs",
+      "http://vozforums.com/*",
+      "https://vozforums.com/*",
+      "http://www.vozforums.com/*",
+      "https://www.vozforums.com/*",
+      "notifications",
+      "storage"
    ],
    "short_name": "Voz",
    "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "2.1.5",
-   "web_accessible_resources": [ 
-      "html/*", 
-      "js/*", 
-      "css/*", 
-      "img/*", 
-      "icos/*", 
+   "version": "2.2.0",
+   "web_accessible_resources": [
+      "html/*",
+      "js/*",
+      "css/*",
+      "img/*",
+      "icos/*",
       "audios/*",
-      "bower_components/*" 
+      "bower_components/*"
    ]
 }

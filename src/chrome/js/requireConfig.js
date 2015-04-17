@@ -5,5 +5,5 @@ var requirejsConfig = {
     paths: {
         lib: '/js/libs'
     }
-};
+}; 
 requirejs.config(requirejsConfig);
