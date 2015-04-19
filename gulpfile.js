@@ -94,7 +94,7 @@ gulp.task('compile-crx', ['compile-crx-copy-assert'], function () {
 				});
 });
 
-gulp.task('watch-chrome', function(){
+gulp.task('watch-chrome', ['compile-crx-copy-assert'], function(){
 	gulp.watch(path.chromeSrc + '/**/*', {readDelay: 500}, ['compile-crx-copy-assert']);
 });
 

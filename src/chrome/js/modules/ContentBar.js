@@ -121,7 +121,7 @@ define([], function () {
                     template:"setting_barButton"
                 },
                 templates:{
-                    setting_barButton:"<a href='{0}' target='_blank'><span class='icon-cog'></span></a>".format(eUrl("/html/options.html")),
+                    setting_barButton:"<a href='{0}' target='_blank'><i class='fa fa-cogs'></i></a>".format(eUrl("/html/options.html")),
                     setting_container:"<div class='no-container'></div>"
                 },
                 container:{

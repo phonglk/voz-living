@@ -1,79 +1,79 @@
 {
-   "background": {
-      "page": "html/background.html"
-   },
-   "browser_action": {
-      "default_icon": {
-         "19": "icos/16.png",
-         "38": "icos/64.png"
-      },
-      "default_popup": "./html/popup.html",
-      "default_title": "Voz Living"
-   },
-   "content_scripts": [ {
-      "all_frames": false,
-      "css": [
-         "bower_components/bootstrap/dist/css/bootstrap.css",
-         "bower_components/fontawesome/css/font-awesome.css",
-         "css/styles.css"
-      ],
-      "js": [
-         "bower_components/knockoutjs/dist/knockout.js",
-         "bower_components/jquery/dist/jquery.js",
-         "bower_components/lodash/lodash.js",
-         "bower_components/requirejs/require.js",
-         "js/libs/knockout-3.0.0.customTemplateSource.js",
-         "js/libs/knockout-3.0.0.mapping.js",
-         "js/libs/jquery.mousewheel.min.js",
-         "js/libs/jquery.mCustomScrollbar.js",
-         "js/libs/bootstrap.min.js",
-         "js/requireContent.js",
-         "js/requireConfig.js",
-         "js/libs/utils.js",
-         "js/libs/utils.ct.js",
-         "js/content.js"
-      ],
-      "matches": [
-         "http://localhost/",
-         "http://localhost/*",
-         "*://*.localhost/*",
-         "*://*.vozforums.com/*",
-         "http://*.vozforums.com/*",
-         "http://www.vozforums.com/*"
-      ],
-      "run_at": "document_start"
-   } ],
-   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
-   "description": "Voz Living. Xem chi ti\u1EBFt t\u00EDnh n\u0103ng \u1EDF Option c\u1EE7a extension -\u003E About",
-   "icons": {
-      "128": "icos/128.png",
-      "16": "icos/16.png",
-      "256": "icos/256.png",
-      "32": "icos/32.png",
-      "64": "icos/64.png"
-   },
-   "manifest_version": 2,
-   "name": "Voz Living",
-   "options_page": "html/options.html",
-   "permissions": [
-      "tabs",
-      "http://vozforums.com/*",
-      "https://vozforums.com/*",
-      "http://www.vozforums.com/*",
-      "https://www.vozforums.com/*",
-      "notifications",
-      "storage"
-   ],
-   "short_name": "Voz",
-   "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "2.2.0",
-   "web_accessible_resources": [
-      "html/*",
-      "js/*",
-      "css/*",
-      "img/*",
-      "icos/*",
-      "audios/*",
-      "bower_components/*"
-   ]
+    "background": {
+        "page": "html/background.html"
+    },
+    "browser_action": {
+        "default_icon": {
+            "19": "./common/icon/16.png",
+            "38": "./common/icon/64.png"
+        },
+        "default_popup": "./html/popup.html",
+        "default_title": "Voz Living"
+    },
+    "content_scripts": [{
+        "all_frames": false,
+        "css": [
+            "bower_components/bootstrap/dist/css/bootstrap.css",
+            "bower_components/fontawesome/css/font-awesome.css",
+            "css/styles.css"
+        ],
+        "js": [
+            "bower_components/knockoutjs/dist/knockout.js",
+            "bower_components/bower-knockout-mapping/dist/knockout.mapping.js",
+            "bower_components/jquery/dist/jquery.js",
+            "bower_components/lodash/lodash.js",
+            "bower_components/requirejs/require.js",
+            "bower_components/bootstrap/dist/js/bootstrap.js",
+            "js/libs/knockout-3.0.0.customTemplateSource.js",
+            "js/libs/jquery.mousewheel.min.js",
+            "js/libs/jquery.mCustomScrollbar.js",
+            "js/requireContent.js",
+            "js/requireConfig.js",
+            "js/libs/utils.js",
+            "js/libs/utils.ct.js",
+            "js/content.js"
+        ],
+        "matches": [
+            "http://localhost/",
+            "http://localhost/*",
+            "*://*.localhost/*",
+            "*://*.vozforums.com/*",
+            "http://*.vozforums.com/*",
+            "http://www.vozforums.com/*"
+        ],
+        "run_at": "document_start"
+    }],
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "description": "Voz Living. Xem chi ti\u1EBFt t\u00EDnh n\u0103ng \u1EDF Option c\u1EE7a extension -\u003E About",
+    "icons": {
+        "128": "./common/icon/128.png",
+        "16": "./common/icon/16.png",
+        "256": "./common/icon/256.png",
+        "32": "./common/icon/32.png",
+        "64": "./common/icon/64.png"
+    },
+    "manifest_version": 2,
+    "name": "Voz Living",
+    "options_page": "html/options.html",
+    "permissions": [
+        "tabs",
+        "http://vozforums.com/*",
+        "https://vozforums.com/*",
+        "http://www.vozforums.com/*",
+        "https://www.vozforums.com/*",
+        "notifications",
+        "storage"
+    ],
+    "short_name": "Voz",
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "version": "2.2.0",
+    "web_accessible_resources": [
+        "html/*",
+        "js/*",
+        "css/*",
+        "img/*",
+        "icos/*",
+        "common/*",
+        "bower_components/*"
+    ]
 }

@@ -2,13 +2,15 @@ define(function ($html) {
     return function ($html) {
         return{
             getThreadId:function(){
-
-                var thread_id = $html.find("#threadtools_menu a[href*='t=']:eq(0)").attr("href").match(/t=(\d+)/);
-                if(thread_id != null && thread_id.length > 0){
-                    return thread_id[1];
-                }else{
-                    return -1;
-                }
+                var thread_id = $html.find("#threadtools_menu a[href*='t=']:eq(0)");
+                if(thread_id.length > 0){
+                    thread_id = thread_id.attr("href").match(/t=(\d+)/);
+                    if(thread_id != null && thread_id.length > 0){
+                        return thread_id[1];
+                    }else{
+                        return -1;
+                    }
+                 }
             },
             getPage: function () {
                 var page;
