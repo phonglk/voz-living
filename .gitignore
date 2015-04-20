@@ -4,3 +4,5 @@
 /compile
 /built
 extension/node_modules
+extension/built/voz-living.crx
+extension/compile
