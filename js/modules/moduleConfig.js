@@ -53,6 +53,7 @@ define({
             path:"SocialSharing/FacebookSharing"
         },
         PageByKey:{},
+        HotLinks:{},
         LoadQuickMQuote:{
             path:"Editor/LoadQuickMQuote"
         }
