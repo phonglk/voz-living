@@ -1,7 +1,7 @@
 define(["moduleHelper", "lib/jquery.textarea-helper","lib/jquery.cookie"], function (moduleHelper, null1) {
     function clearChecked(){
         $.cookie("vbulletin_multiquote","");
-        $("[src='http://vozforums.com/images/buttons/multiquote_on.gif']").attr("src","http://vozforums.com/images/buttons/multiquote_off.gif")
+        $("[src='https://vozforums.com/images/buttons/multiquote_on.gif']").attr("src","https://vozforums.com/images/buttons/multiquote_off.gif")
     }
     var module = new moduleHelper.Module({
         name: "LoadQuickMQuote",
@@ -25,8 +25,8 @@ define(["moduleHelper", "lib/jquery.textarea-helper","lib/jquery.cookie"], funct
                 placement:"left",
                 trigger:"hover",
                 title:"test",
-                content:"Để thực hiện trích dẫn nhiều bài cùng lúc: Click vào nút <img src='http://vozforums.com/images/buttons/multiquote_off.gif'/>" +
-                    " ở bên dưới-phải của mỗi bài viết cần trích dẫn.<br/>Những bài viết nào đã được đánh dấu icon sẽ chuyển sang -> <img src='http://vozforums.com/images/buttons/multiquote_on.gif'/>"
+                content:"Để thực hiện trích dẫn nhiều bài cùng lúc: Click vào nút <img src='https://vozforums.com/images/buttons/multiquote_off.gif'/>" +
+                    " ở bên dưới-phải của mỗi bài viết cần trích dẫn.<br/>Những bài viết nào đã được đánh dấu icon sẽ chuyển sang -> <img src='https://vozforums.com/images/buttons/multiquote_on.gif'/>"
             })
 
             $btnClearQ.on("click",function(){

@@ -5,7 +5,7 @@ define ["Global"],(g)->
   Thread = g.get("Thread");
   panel = null;
   g.set("URL",{
-    host: "http://vozforums.com/"
+    host: "https://vozforums.com/"
     forumdisplay : "forumdisplay.php"
     showthread : "showthread.php"
   })

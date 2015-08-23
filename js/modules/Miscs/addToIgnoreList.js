@@ -14,7 +14,7 @@ define(["moduleHelper"],function(moduleHelper) {
                 var uid = $this.find("a[href*='member.php']").attr("href").match(/\?u=(\d+)/)[1];
                 var ignoreRow = $(("<tr>" +
                     "<td class='vbmenu_option vbmenu_option_alink'>" +
-                    "<a target='_blank' href='http://vozforums.com/profile.php?do=addlist&userlist=ignore&u={0}' title='{2}'>{1}</a>" +
+                    "<a target='_blank' href='https://vozforums.com/profile.php?do=addlist&userlist=ignore&u={0}' title='{2}'>{1}</a>" +
                     "</td>" +
                     "</tr>").format(
                         uid,

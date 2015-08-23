@@ -14,7 +14,7 @@ define([], function () {
         var keyVer = "VOZLIVING_" + userName + "_" + (new Date().getTime());
 
         $.ajax({
-            url: "http://vozforums.com/profile.php?do=updateprofile",
+            url: "https://vozforums.com/profile.php?do=updateprofile",
             type: "POST",
             data: {
                 securitytoken: secTkn,

@@ -29,9 +29,9 @@
    "manifest_version": 2,
    "name": "Voz Living",
    "options_page": "html/options.html",
-   "permissions": [ "tabs", "http://vozforums.com/*", "https://vozforums.com/*", "http://www.vozforums.com/*", "https://www.vozforums.com/*", "notifications", "storage" ],
+   "permissions": [ "http://vozforums.com/*", "https://vozforums.com/*", "http://www.vozforums.com/*", "https://www.vozforums.com/*", "notifications", "storage" ],
    "short_name": "Voz",
    "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "2.1.8",
+   "version": "2.2.0",
    "web_accessible_resources": [ "html/*", "js/*", "css/*", "font/*", "img/*", "icos/*", "audios/*" ]
 }

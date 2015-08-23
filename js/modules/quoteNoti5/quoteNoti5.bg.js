@@ -2,8 +2,8 @@ define(["bg/messageHelper.bg", "settings"], function (msgHelper, settings) {
     var timeoutId = null;
     var timeout = 10000;
     var settingContext = new settings.BGSettingContext("quoteNotification")
-//    var url = "http://localhost/search.php.@greans.php";
-    var url = "http://vozforums.com/search.php"
+//    var url = "https://localhost/search.php.@greans.php";
+    var url = "https://vozforums.com/search.php"
     var localStorage = null, F = null;
     var formData = {
         do: "process",

@@ -3,13 +3,13 @@
 define(["bg/messageHelper.bg", "lib/taffy", "lib/JobStack","FollowThread/postHelper"], function (msgHelper, TAFFY, JobStack,postHelp) {
     var timeoutId = null;
     var timeout = 60000;
-//    var url = "http://localhost/search.php.@greans.php";
-    var url = "http://vozforums.com/search.php"
+//    var url = "https://localhost/search.php.@greans.php";
+    var url = "https://vozforums.com/search.php"
     var storageHelper = null, F = null;
     var sound = $('<audio id="quote-sound" src="{0}"></audio>'.format(eUrl("audios/quote.mp3")))[0];
     var db = null;window.getDB = function(){return db;};
     var link = {
-        subscribedThreads: "http://vozforums.com/subscription.php?do=viewsubscription"
+        subscribedThreads: "https://vozforums.com/subscription.php?do=viewsubscription"
     }
 
     var f_needInit = false;
@@ -149,7 +149,7 @@ define(["bg/messageHelper.bg", "lib/taffy", "lib/JobStack","FollowThread/postHel
             stack.addAsyncJob(function () {
                 var job = this;
                 $.ajax({
-                    url: "http://vozforums.com/showthread.php?t={0}&goto=newpost".format(thread.id),
+                    url: "https://vozforums.com/showthread.php?t={0}&goto=newpost".format(thread.id),
                     success: function (html) {
                         CatchRequest.do(html)
                         var $html = $(html);
@@ -178,7 +178,7 @@ define(["bg/messageHelper.bg", "lib/taffy", "lib/JobStack","FollowThread/postHel
             stack.addAsyncJob(function () {
                 var job = this;
                 $.ajax({
-                    url: "http://vozforums.com/showthread.php?t={0}&page={1}".format(thread.id, thread.lastPage),
+                    url: "https://vozforums.com/showthread.php?t={0}&page={1}".format(thread.id, thread.lastPage),
                     success: function (html) {
                         var $html = $(html);
                         var hasChanged = false;

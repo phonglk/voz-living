@@ -9,8 +9,9 @@ define(["moduleHelper", "lib/jquery-scrollto"], function (moduleHelper, jst) {
         self.isActive = ko.observable(false);
         self.isLoading = ko.observable(false);
         self.isLoaded = ko.observable(false);
+        var protocal = "https:";
 
-        self.href = ko.observable("http://vozforums.com/showthread.php?t=" + self.id);
+        self.href = ko.observable(protocal + "//vozforums.com/showthread.php?t=" + self.id);
 
         self.lastPage = ko.observable(1);
         self.content = ko.observable("");
@@ -23,12 +24,12 @@ define(["moduleHelper", "lib/jquery-scrollto"], function (moduleHelper, jst) {
             }
         }
         self.last = function (t) {
-            self.href("http://vozforums.com/showthread.php?t=" + self.id + "&page=" + self.lastPage());
+            self.href(protocal + "//vozforums.com/showthread.php?t=" + self.id + "&page=" + self.lastPage());
             self.loadPostPosition(":last")
             resetLoad()
         }
         self.first = function () {
-            self.href("http://vozforums.com/showthread.php?t=" + self.id + "&page=" + 1);
+            self.href(protocal + "//vozforums.com/showthread.php?t=" + self.id + "&page=" + 1);
             self.loadPostPosition(":first")
             resetLoad()
         }

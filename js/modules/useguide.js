@@ -5,7 +5,7 @@ define(function(){
         eStorage.getItem(guideline_var,function(rs){
             if(rs==null || rs==false){
                 var html = $("<div class='cmnw first-use'>" +
-                    "Tính năng mới [Options] <img src='http://farm9.staticflickr.com/8093/8580046762_9d6659f48f_m.jpg'/>" +
+                    "Tính năng mới [Options] <img src='https://farm9.staticflickr.com/8093/8580046762_9d6659f48f_m.jpg'/>" +
                     "<a href='javascript:void(0)' class='btn confirm'>Biết rồi</a>" +
                     "<a href='javascript:void(0)' class='btn ignore'>Bỏ qua</a>" +
                     "</div>")
