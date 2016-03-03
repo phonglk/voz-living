@@ -11,6 +11,8 @@ define(["moduleHelper"],function(moduleHelper) {
             $("[id^=div-gpt-ad]").hide();
             $("[id^=google_ads_div],.middleads").hide();
 
+            $(".page > div > div:eq(0)").append("<a href='/showthread.php?t=4725010' style='text-align:center; font-size:18px;display: block; color: green;'>Chung tay report page ngôn tình</a>")
+
             this.setting.get("fullSize",function(v){
                 if(JSON.parse(v) == true){
                     $(".page").css({
