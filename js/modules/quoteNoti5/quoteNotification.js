@@ -7,7 +7,7 @@ define(["../ContentBar", "bgHelper","checkLogin"], function (contentBar, bgHelpe
     var barButtonTemplate = "<span class='icon-comment'></span>" +
         "<span class='badge badge-mini' data-bind='text: unseenCount'></span>";
     var quoteItemTemplate = "<div class='Noti5-QuoteItem data-item'>" +
-        "<strong><a data-bind='attr:{href:\"showthread.php?t=\"+thread.tid}'><i class='icon-th-list icon-white'></i><span data-bind='text:thread.title'></span></a></strong>" +
+        "<strong><a data-bind='attr:{href:\"showthread.php?t=\"+thread.id}'><i class='icon-th-list icon-white'></i><span data-bind='text:thread.title'></span></a></strong>" +
         "&nbsp;&nbsp;&nbsp;" +
         "<span class='label label-primary' style=''><a data-bind='attr:{href:\"member.php?u=\"+author.userid}'><i class='icon-user icon-white'></i><span data-bind='text: author.username'></span></a> : </span>  " +
         "<span style='font-style:italic;text-decoration:underline'>" +
@@ -31,6 +31,7 @@ define(["../ContentBar", "bgHelper","checkLogin"], function (contentBar, bgHelpe
 
     function updateQuotes(qo) { // from fresh data
         qO.quotes.removeAll();
+        console.log(qo)
         for (var i = 0; i < qo.quotes.length; i++) {
             var quote = qo.quotes[i];
             quote.hasSeen = ko.observable(quote.hasSeen);
