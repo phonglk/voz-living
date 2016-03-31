@@ -6,6 +6,7 @@ define(function() {
                 $this = $(this);
                 href = $this.attr("href");
                 if (/\.(jpg|png|gif|bmp)$/.test(href)) {
+                    if($this.find("img").length > 0) return;
                     $this.attr("data-smartlink", "image");
                     $img = $("<div><img src='" + href + "' title='Có thể xảy ra sai sót trong việc tự động nhận biết hình, nếu có xin vui lòng báo lỗi qua pm greans(@vozforum)'/></div>");
                     return $this.after($img);
