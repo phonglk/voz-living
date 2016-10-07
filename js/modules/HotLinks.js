@@ -1,6 +1,6 @@
-define(["ContentBar"], function (contentBar) {
-    var exports = {
-        name: "hotLink",
+define(["ContentBar", "moduleHelper"], function (contentBar, moduleHelper) {
+    var exports = new moduleHelper.Module({
+        name: "HotLinks",
         friendlyName: "Hot Links",
         settings: {
             active: {
@@ -11,44 +11,41 @@ define(["ContentBar"], function (contentBar) {
 
         },
         run: function () {
+            var self = this;
             setTimeout(function(){
-                contentBar.addBarItem({
-                    id:"hot_link17_bar",
-                    barButton:{
-                        template:"hot_link17_barButton"
-                    },
-                    templates:{
-                        hot_link17_barButton:"<a href='/forumdisplay.php?f=17' style='font-size: 15px;position: relative;top: -10px;'>F17</a>",
-                        hot_link17_container:"<div class='no-container'></div>"
-                    },
-                    container:{
-                        template:"hot_link17_container",
-                        data:{}
-                    },
-                    barButtonClick:function(){
-                        return true;
-                    }
-                });
+                console.log(self);
+                self.setting.get("quickLinks",function(links){
+                    var hotlinks = [17, 33];
+                    try{
+                        hotlinks = links.split(",").map(function(s){ return parseInt(s.toString().trim())});
+                    }catch(e){
+                        console.warn('Error while process custom hotLinks configuration: ' + links);
+                        console.info(e);
+                    } 
 
-                contentBar.addBarItem({
-                    id:"hot_link33_bar",
-                    barButton:{
-                        template:"hot_link33_barButton"
-                    },
-                    templates:{
-                        hot_link33_barButton:"<a href='/forumdisplay.php?f=33' style='font-size: 15px;position: relative;top: -10px;'>F33</a>",
-                        hot_link33_container:"<div class='no-container'></div>"
-                    },
-                    container:{
-                        template:"hot_link33_container",
-                        data:{}
-                    },
-                    barButtonClick:function(){
-                        return true;
-                    }
-                });
+                    hotlinks.forEach(function(fid) {
+                        if(Number.isNaN(fid)) return;
+                        contentBar.addBarItem({
+                            id:`hot_link${fid}_bar`,
+                            barButton:{
+                                template:`hot_link${fid}_barButton`
+                            },
+                            templates:{
+                                [`hot_link${fid}_barButton`]:`<a href='/forumdisplay.php?f=${fid}' style='font-size: 15px;position: relative;top: -10px;'>F${fid}</a>`,
+                                [`hot_link${fid}_container`]:"<div class='no-container'></div>"
+                            },
+                            container:{
+                                template:`hot_link${fid}_container`,
+                                data:{}
+                            },
+                            barButtonClick:function(){
+                                return true;
+                            }
+                        });
+                    })
+                })
             }, 1500);
         }
-    }
-    return exports
+    });
+    return exports;
 })

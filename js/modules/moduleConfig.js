@@ -71,7 +71,15 @@ define({
             setting:"options-page/FacebookSharing",
         },
         PageByKey:{},
-        HotLinks:{},
+        HotLinks:{
+            settings:{
+                quickLinks:{
+                    text:"Truy cập nhanh",
+                    default:"17,33"
+                },
+            },
+            setting:"options-page/quickLinks"
+        },
         LoadQuickMQuote:{
             path:"Editor/LoadQuickMQuote"
         }
