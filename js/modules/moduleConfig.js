@@ -38,6 +38,17 @@ define({
             path:"SafeSurfing/SafeSurfing"
         },
         LinkProcess:{
+            settings:{
+                enableYoutubeProcess:{
+                    text:"Tự động hiện youtube player",
+                    default:"true"
+                },
+                enableImageLinkProcess:{
+                    text:"Tự động hiện hình ảnh",
+                    default:"true"
+                },
+            },
+            setting:"options-page/linkProcess",
             path:"LinkProcess/LinkProcess"
         },
         QuickIgnore:{

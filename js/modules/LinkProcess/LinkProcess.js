@@ -32,20 +32,20 @@ define(["moduleHelper"], function (moduleHelper) {
                     LinkRecognition.run($context);
 
                 // do link recognition first
-//                self.settings.get("active_smart_image", function (isActive) {
-//                    if (isActive) {
+               self.settings.get("enableImageLinkProcess", function (isActive) {
+                   if (isActive) {
                         require(["LinkProcess/SmartLinkRecognition"], function (SmartLinkRecognition) {
                             SmartLinkRecognition.imageLink($context);
                         });
-//                    }
-//                });
-//                self.settings.get("active_smart_youtube", function (isActive) {
-//                    if (isActive) {
+                   }
+               });
+               self.setting.get("enableYoutubeProcess", function (isActive) {
+                   if (isActive) {
                         require(["LinkProcess/SmartLinkRecognition"], function (SmartLinkRecognition) {
                             SmartLinkRecognition.youtubeLink($context);
                         });
-//                    }
-//                });
+                   }
+               });
             });
 
 
