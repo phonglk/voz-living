@@ -61,7 +61,14 @@ define({
             path:"PreviewThread/PreviewThread"
         },
         FacebookSharing:{
-            path:"SocialSharing/FacebookSharing"
+            path:"SocialSharing/FacebookSharing",
+            settings:{
+                enableFacebookSharing:{
+                    text:"Share lên Facebook",
+                    default:"false"
+                },
+            },
+            setting:"options-page/FacebookSharing",
         },
         PageByKey:{},
         HotLinks:{},
