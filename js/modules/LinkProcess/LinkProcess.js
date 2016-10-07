@@ -32,7 +32,7 @@ define(["moduleHelper"], function (moduleHelper) {
                     LinkRecognition.run($context);
 
                 // do link recognition first
-               self.settings.get("enableImageLinkProcess", function (isActive) {
+               self.setting.get("enableImageLinkProcess", function (isActive) {
                    if (isActive) {
                         require(["LinkProcess/SmartLinkRecognition"], function (SmartLinkRecognition) {
                             SmartLinkRecognition.imageLink($context);
