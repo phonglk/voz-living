@@ -29,6 +29,15 @@
    "manifest_version": 2,
    "name": "Voz Living",
    "options_page": "html/options.html",
+   "options_ui": {
+      // Required.
+      "page": "options.html",
+      // Recommended.
+      "chrome_style": true
+      // Not recommended; only provided for backwards compatibility,
+      // and will be unsupported in a future version of Chrome (TBD).
+      //"open_in_tab": true
+  },
    "permissions": [ "http://vozforums.com/*", "https://vozforums.com/*", "http://www.vozforums.com/*", "https://www.vozforums.com/*", "notifications", "storage" ],
    "short_name": "Voz",
    "update_url": "https://clients2.google.com/service/update2/crx",
