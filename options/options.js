@@ -1,5 +1,4 @@
 // Saves options to chrome.storage.sync.
-const CONFIGURATION_STORE_KEY = 'configuration';
 const defaultConfiguration = {
   removeAds: true,
   enableFullScreen: false,
@@ -7,7 +6,10 @@ const defaultConfiguration = {
   enableLinkProcessImage: true,
   quickAccess: '17,33'
 }
-require(['common/storage', 'common/ko-utils'], function({getSync, setSync}, {ObsToObj, ObjToObs, assignObjToObs}) {
+require(['common/storage', 'common/ko-utils', 'options/constants'], function(
+  {getSync, setSync}, 
+  {ObsToObj, ObjToObs, assignObjToObs}, 
+  {CONFIGURATION_STORE_KEY}) {
   const vm = window._vm /* debug purpose */ ={}
 
   function onChange() {

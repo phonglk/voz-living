@@ -1,4 +1,4 @@
-define(["ContentBar", "moduleHelper"], function (contentBar, moduleHelper) {
+define(["ContentBar", "moduleHelper", 'options/get-configuration'], function (contentBar, moduleHelper, {getConfiguration}) {
     var exports = new moduleHelper.Module({
         name: "HotLinks",
         friendlyName: "Hot Links",
@@ -13,16 +13,14 @@ define(["ContentBar", "moduleHelper"], function (contentBar, moduleHelper) {
         run: function () {
             var self = this;
             setTimeout(function(){
-                console.log(self);
-                self.setting.get("quickLinks",function(links){
+                getConfiguration('quickAccess').then((textLinks) => {
                     var hotlinks = [17, 33];
                     try{
-                        hotlinks = links.split(",").map(function(s){ return parseInt(s.toString().trim())});
-                    }catch(e){
-                        console.warn('Error while process custom hotLinks configuration: ' + links);
+                        hotlinks = textLinks.split(",").map(function(s){ return parseInt(s.toString().trim())});
+                    } catch(e) {
+                        console.warn('Error while process custom hotLinks configuration: ' + textLinks);
                         console.info(e);
-                    } 
-
+                    }
                     hotlinks.forEach(function(fid) {
                         if(Number.isNaN(fid)) return;
                         contentBar.addBarItem({

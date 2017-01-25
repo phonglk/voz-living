@@ -3,7 +3,9 @@ var requirejsConfig = {
     baseUrl: '/js/modules',
     // Optionally specify different paths for specific modules
     paths: {
-        lib: '/js/libs'
+        lib: '/js/libs',
+        options: '/options',
+        common: '/common',
     }
 };
 requirejs.config(requirejsConfig);

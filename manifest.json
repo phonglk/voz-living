@@ -42,5 +42,5 @@
    "short_name": "Voz",
    "update_url": "https://clients2.google.com/service/update2/crx",
    "version": "2.2.5",
-   "web_accessible_resources": [ "html/*", "js/*", "css/*", "font/*", "img/*", "icos/*", "audios/*" ]
+   "web_accessible_resources": [ "html/*", "js/*", "css/*", "font/*", "img/*", "icos/*", "audios/*" ,"options/*", "common/*"]
 }
