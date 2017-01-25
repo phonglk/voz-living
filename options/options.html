@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Test Extension Options</title>
+  <style>
+    body { padding: 5px; margin: 5px; }
+  </style>
+  <script src="../node_modules/knockout/build/output/knockout-latest.js"></script>
+  <script src="../node_modules/lodash/lodash.min.js"></script>
+  <script src="../node_modules/requirejs/require.js"></script>
+  <script src="../common/require-chrome-extension-adapter.js"></script>
+</head>
+
+<body>
+  <div id="main">
+    <h2>Remove Ads</h2>
+    <div>
+      <label>
+        <input type="checkbox" data-bind='checked: configuration.removeAds'/>
+        Remove Ads
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="checkbox" data-bind='checked: configuration.enableFullScreen'/>
+        Fullscreen
+      </label>
+    </div>
+    <h2>Auto detect link in post</h2>
+    <div>
+      <label>
+        <input type="checkbox" data-bind='checked: configuration.enableLinkProcessYoutube'/>
+        Show youtube player for youtube link
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="checkbox" data-bind='checked: configuration.enableLinkProcessImage'/>
+        Show image right below image link
+      </label>
+    </div>
+    <h2>Quick Access</h2>
+    <div>
+      <label>
+        Forum Ids (separated by commas ','): <input type="text" data-bind='textInput: configuration.quickAccess'/>
+      </label>
+    </div>
+    <hr/>
+    <div id="status"></div>
+    <button id="save" data-bind="enable: isSaveButtonEnabled()">Save</button>
+    <span data-bind="visible: !isSaveButtonEnabled()">Please made changes to save</span>
+    <button id="restore" style="float: right" data-bind="visible: isRestoreButtonEnable()">Restore</button> 
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>

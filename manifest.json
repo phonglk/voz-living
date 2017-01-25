@@ -31,7 +31,7 @@
    "options_page": "html/options.html",
    "options_ui": {
       // Required.
-      "page": "options.html",
+      "page": "options/options.html",
       // Recommended.
       "chrome_style": true
       // Not recommended; only provided for backwards compatibility,

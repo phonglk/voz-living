@@ -1,0 +1,32 @@
+{
+  "name": "voz-living",
+  "version": "1.0.0",
+  "description": "voz Living - made by vozer, for vozer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phonglk/voz-living.git"
+  },
+  "keywords": [
+    "voz",
+    "voz-living",
+    "extension",
+    "chrome",
+    "extension"
+  ],
+  "author": "Le Khoi-Phong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phonglk/voz-living/issues"
+  },
+  "homepage": "https://github.com/phonglk/voz-living#readme",
+  "dependencies": {
+    "knockout": "^3.4.1",
+    "lodash": "^4.17.4",
+    "requirejs": "^2.3.2",
+    "vue": "^2.1.10"
+  }
+}
