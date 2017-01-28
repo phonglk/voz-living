@@ -20,21 +20,21 @@ define(["moduleHelper"], function (moduleHelper) {
         run: function () {
             if(isOnPostsPage() == false)return;
 
-            this.setting.get("enableFacebookSharing",function(v){
-                if(JSON.parse(v) == true){
-                    $("[id^='td_post_']").each(function(){
-                        var $this = $(this);
-                        var id = $this.attr("id").match(/\d+/)[0];
-                        var href = location.href+"#post_message_"+id;
-                        var shrBtn = $('<div class="fb-share-button" data-href="'+href+'" data-type="icon_link" data-layout="button_count"></div>&nbsp;');
-                        var controls = $this.find(">div:last");
-                        if(controls.length > 0){
-                            controls.prepend(shrBtn);
-                        }
-                    })
-                    insertFBCode();     
-                }
-            });
+            // this.setting.get("enableFacebookSharing",function(v){
+            //     if(JSON.parse(v) == true){
+            //         $("[id^='td_post_']").each(function(){
+            //             var $this = $(this);
+            //             var id = $this.attr("id").match(/\d+/)[0];
+            //             var href = location.href+"#post_message_"+id;
+            //             var shrBtn = $('<div class="fb-share-button" data-href="'+href+'" data-type="icon_link" data-layout="button_count"></div>&nbsp;');
+            //             var controls = $this.find(">div:last");
+            //             if(controls.length > 0){
+            //                 controls.prepend(shrBtn);
+            //             }
+            //         })
+            //         insertFBCode();     
+            //     }
+            // });
         }
     })
 
