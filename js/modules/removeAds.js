@@ -1,4 +1,4 @@
-define(["moduleHelper"],function(moduleHelper) {
+define(["moduleHelper", 'options/get-configuration'],function(moduleHelper, {getConfiguration}) {
     var module = new moduleHelper.Module({
         name:"removeAds",
         friendlyName: "Remove Advertising",
@@ -12,15 +12,14 @@ define(["moduleHelper"],function(moduleHelper) {
             $("[id^=google_ads_div],.middleads").hide();
 
             $(".page > div > div:eq(0)").append("<a href='/showthread.php?t=4725010' style='text-align:center; font-size:18px;display: block; color: green;'>Chung tay report page ngôn tình</a>")
-
-            this.setting.get("fullSize",function(v){
-                if(JSON.parse(v) == true){
+            getConfiguration('enableFullScreen').then((value) => {
+                if(value == true){
                     $(".page").css({
                         width: "100%",
                         maxWidth:"5000px"
                     });
                 }
-            })
+            });
         }
     })
     return module;
